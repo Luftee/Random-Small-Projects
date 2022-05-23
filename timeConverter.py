@@ -1,22 +1,32 @@
-def format_check(a):
+def input_check():
+    a = input()
+    def format_error(a):
+        if a:
+            print("\nFormat error")
+            return False
+
     b = len(a)
-    return True if b != 3 and b != 4 else return False
-    return True if int(a) > 2359 else return False
+    format_error(b < 3 or b > 4)
+    format_error(int(a) > 2359)
+    format_error(int(str(a)[-2:]) >= 60)
+    return a
 
 while True:
     print("Original timezone: ", end = "")
-    oldZone = input()
-    break if format_check(oldZone) else continue
+    oldZone = input_check()
+    if oldZone == False: break
     print("Original time: ", end = "")
-    oldTime = input()
-    break if format_check(oldTime) else continue
+    oldTime = input_check()
+    if oldTime == False: break
     print("New timezone: ", end = "")
-    newZone = input()
-    break if format_check(newZone) else continue
+    newZone = input_check()
+    if newZone == False: break
         
     newTime = int(oldTime) - int(oldZone) + int(newZone)
-    newTime = newTime - 2400 if newTime > 2359 else continue
+    if int(str(newTime)[-2:]) >= 60: newTime = newTime - 60 + 100
+    if newTime > 2359: newTime = newTime - 2400
     
     print("\nNew time: ", end = "")
+    if newTime < 1000: print("0", end = "")
     print(newTime)
     break
