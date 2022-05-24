@@ -1,5 +1,6 @@
 def input_check():
     a = input()
+    
     def format_error(a):
         if a:
             print("\nFormat error")
