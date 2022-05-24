@@ -1,3 +1,5 @@
+import inputCheck
+
 while True:
     print("Original timezone: ", end = "")
     oldZone = input_check()
