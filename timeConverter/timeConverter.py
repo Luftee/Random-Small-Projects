@@ -1,4 +1,4 @@
-from inputCheck import input_check
+from functions import input_check
 
 while True:
     print("Original timezone: ", end = "")
