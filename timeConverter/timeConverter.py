@@ -1,6 +1,6 @@
 from functions import input_check
 
-while True:
+if True:
     print("Original timezone: ", end = "")
     oldZone = input_check()
     if oldZone == False: break
@@ -18,4 +18,3 @@ while True:
     print("\nNew time: ", end = "")
     if newTime < 1000: print("0", end = "")
     print(newTime)
-    break
