@@ -1,14 +1,11 @@
 from functions import input_check
 
 if True:
-    print("Original timezone: ", end = "")
-    oldZone = input_check()
+    oldZone = input_check("Original timezone: ")
     if oldZone == False: break
-    print("Original time: ", end = "")
-    oldTime = input_check()
+    oldTime = input_check("Original time: ")
     if oldTime == False: break
-    print("New timezone: ", end = "")
-    newZone = input_check()
+    newZone = input_check("New timezone: ")
     if newZone == False: break
         
     newTime = int(oldTime) - int(oldZone) + int(newZone)
