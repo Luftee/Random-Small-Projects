@@ -13,4 +13,4 @@ def input_check(b):
     return a
 
 if __name__ == "__main__":
-    print("You found a secret message, you are not suppose to run this.")
+    print("You are not suppose to run this.")
